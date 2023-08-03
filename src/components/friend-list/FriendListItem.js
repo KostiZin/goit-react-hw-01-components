@@ -1,9 +1,16 @@
-export function FriendListItem(id, avatar, name, isOnline) {
-  return (
-    <li className="item" key={id}>
-      <span className="status">{isOnline}</span>
-      <img class="avatar" src={avatar} alt="User avatar" width="48" />
-      <p class="name">{name}</p>
-    </li>
-  );
+export function FriendListItem({ friends }) {
+  return friends.map(friend => {
+    return (
+      <li className="item" key={friend.id}>
+        <span className="status">{friend.isOnline}</span>
+        <img
+          className="avatar"
+          src={friend.avatar}
+          alt="User avatar"
+          width="48"
+        />
+        <p className="name">{friend.name}</p>
+      </li>
+    );
+  });
 }
