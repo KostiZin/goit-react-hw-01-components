@@ -1,18 +1,20 @@
+import { ListStats, UlFatherStats, ListSpan } from './Profile.styled';
+
 export function Stats({ followers, views, likes }) {
   return (
-    <ul className="stats">
-      <li>
-        <span className="label">Followers </span>
-        <span className="quantity">{followers}</span>
-      </li>
-      <li>
-        <span className="label">Views </span>
-        <span className="quantity">{views}</span>
-      </li>
-      <li>
-        <span className="label">Likes </span>
-        <span className="quantity">{likes}</span>
-      </li>
-    </ul>
+    <UlFatherStats>
+      <ListStats>
+        <ListSpan>Followers </ListSpan>
+        <span>{followers}</span>
+      </ListStats>
+      <ListStats>
+        <ListSpan>Views </ListSpan>
+        <span>{views}</span>
+      </ListStats>
+      <ListStats>
+        <ListSpan>Likes </ListSpan>
+        <span>{likes}</span>
+      </ListStats>
+    </UlFatherStats>
   );
 }

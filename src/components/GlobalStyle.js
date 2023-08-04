@@ -27,9 +27,9 @@ img {
     max-width: 100%;
 }
 
-/* table {
-  border-radius: 4px;
-} */
+p {
+  margin: 0;
+}
 
 th, td {
   border-bottom: 1px solid #cadece;

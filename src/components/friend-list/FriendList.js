@@ -3,7 +3,7 @@ import { UlFather } from './FriendList.styled';
 
 export function FriendList({ friends }) {
   return (
-    <UlFather className="friend-list">
+    <UlFather>
       <FriendListItem friends={friends} />
     </UlFather>
   );

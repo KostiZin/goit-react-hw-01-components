@@ -1,5 +1,12 @@
 import { Stats } from './ProfileStats';
-import { MainDiv, DivCard, MainImg } from './Profile.styled';
+import {
+  MainDiv,
+  DivCard,
+  MainImg,
+  PName,
+  PTag,
+  PLocation,
+} from './Profile.styled';
 
 import user from '../data/user.json';
 
@@ -12,12 +19,12 @@ export function Profile() {
     stats: { followers, views, likes },
   } = user;
   return (
-    <MainDiv className="profile">
-      <DivCard className="description">
-        <MainImg src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">@{tag}</p>
-        <p className="location">{location}</p>
+    <MainDiv>
+      <DivCard>
+        <MainImg src={avatar} alt="User avatar" />
+        <PName>{username}</PName>
+        <PTag>@{tag}</PTag>
+        <PLocation>{location}</PLocation>
       </DivCard>
 
       <Stats followers={followers} views={views} likes={likes} />

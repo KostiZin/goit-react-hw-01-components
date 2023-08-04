@@ -8,7 +8,7 @@ import {
 
 export function TransactionHistory({ transactions }) {
   return (
-    <Table className="transaction-history">
+    <Table>
       <Thead>
         <tr>
           <TableTitles>Type</TableTitles>
