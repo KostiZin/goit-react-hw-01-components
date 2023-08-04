@@ -1,18 +1,24 @@
 import { TransactionData } from './TransactionData';
+import {
+  Table,
+  TableTitles,
+  TableLine,
+  Thead,
+} from './TransactionHistory.styled';
 
 export function TransactionHistory({ transactions }) {
   return (
-    <table className="transaction-history">
-      <thead>
+    <Table className="transaction-history">
+      <Thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableTitles>Type</TableTitles>
+          <TableTitles>Amount</TableTitles>
+          <TableTitles>Currency</TableTitles>
         </tr>
-      </thead>
-      <tbody>
+      </Thead>
+      <TableLine>
         <TransactionData transactions={transactions} />
-      </tbody>
-    </table>
+      </TableLine>
+    </Table>
   );
 }

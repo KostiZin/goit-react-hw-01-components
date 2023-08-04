@@ -1,8 +1,13 @@
+import { List, SpanStatus } from './FriendList.styled';
+
 export function FriendListItem({ friends }) {
   return friends.map(friend => {
     return (
-      <li className="item" key={friend.id}>
-        <span className="status">{friend.isOnline}</span>
+      <List className="item" key={friend.id}>
+        <SpanStatus
+          className="status"
+          $status={friend.isOnline.toString()}
+        ></SpanStatus>
         <img
           className="avatar"
           src={friend.avatar}
@@ -10,7 +15,7 @@ export function FriendListItem({ friends }) {
           width="48"
         />
         <p className="name">{friend.name}</p>
-      </li>
+      </List>
     );
   });
 }

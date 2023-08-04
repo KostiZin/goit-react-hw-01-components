@@ -1,13 +1,10 @@
 import { FriendListItem } from './FriendListItem';
-
-// import friends from '../data/friends.json';
-
-// console.log(friends);
+import { UlFather } from './FriendList.styled';
 
 export function FriendList({ friends }) {
   return (
-    <ul className="friend-list">
+    <UlFather className="friend-list">
       <FriendListItem friends={friends} />
-    </ul>
+    </UlFather>
   );
 }

@@ -1,21 +1,19 @@
-// import data from '../data/data.json';
-
-// console.log(data);
+import { Section, List, UlFather } from './Statistics.styled';
 
 export function Statistics({ title, stats }) {
   let statData = stats.map(stat => {
     return (
-      <li className="item" key={stat.id}>
+      <List className="item" key={stat.id}>
         <span className="label">{stat.label}</span>
-        <span className="percentage"> {stat.percentage} %</span>
-      </li>
+        <span className="percentage">{stat.percentage}%</span>
+      </List>
     );
   });
 
   return (
-    <section className="statistics">
+    <Section className="statistics">
       <h2 className="title">{title}</h2>
-      <ul className="stat-list">{statData}</ul>
-    </section>
+      <UlFather className="stat-list">{statData}</UlFather>
+    </Section>
   );
 }
