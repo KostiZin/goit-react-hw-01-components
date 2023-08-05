@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { ListItem, SpanStatus } from './FriendList.styled';
 
 export function FriendListItem({ name, status, avatar }) {
@@ -9,3 +11,9 @@ export function FriendListItem({ name, status, avatar }) {
     </ListItem>
   );
 }
+
+FriendListItem.propTypes = {
+  status: PropTypes.bool,
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+};
