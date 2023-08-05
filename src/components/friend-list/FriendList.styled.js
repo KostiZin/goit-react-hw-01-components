@@ -20,7 +20,6 @@ export const ListItem = styled.li`
 `;
 
 export const SpanStatus = styled.span`
-  border: 10px solid
-    ${props => (props.$status === 'true' ? '#13b310' : '#bbbdbf')};
+  border: 10px solid ${props => (props.$status ? '#13b310' : '#bbbdbf')};
   border-radius: 50px;
 `;

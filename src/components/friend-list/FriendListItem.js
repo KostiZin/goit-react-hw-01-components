@@ -5,7 +5,7 @@ import { ListItem, SpanStatus } from './FriendList.styled';
 export function FriendListItem({ name, status, avatar }) {
   return (
     <ListItem>
-      <SpanStatus $status={status.toString()}></SpanStatus>
+      <SpanStatus $status={status}></SpanStatus>
       <img src={avatar} alt="User avatar" width="48" />
       <p>{name}</p>
     </ListItem>
