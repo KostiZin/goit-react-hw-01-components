@@ -24,7 +24,7 @@ export const App = () => {
       <Profile
         username={user.username}
         tag={user.tag}
-        loaction={user.location}
+        location={user.location}
         avatar={user.avatar}
         stats={user.stats}
       />

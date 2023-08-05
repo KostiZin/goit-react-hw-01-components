@@ -13,7 +13,7 @@ export function FriendListItem({ name, status, avatar }) {
 }
 
 FriendListItem.propTypes = {
-  status: PropTypes.bool,
-  avatar: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  status: PropTypes.bool.isRequired,
+  avatar: PropTypes.string.isRequired,
 };
