@@ -11,11 +11,11 @@ export const Section = styled.section`
   padding: 4px;
 `;
 
-export const UlFather = styled.ul`
+export const List = styled.ul`
   display: flex;
 `;
 
-export const List = styled.li`
+export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;

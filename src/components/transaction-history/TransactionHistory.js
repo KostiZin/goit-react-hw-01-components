@@ -1,12 +1,14 @@
-import { TransactionData } from './TransactionData';
+import PropTypes from 'prop-types';
+
 import {
   Table,
   TableTitles,
-  TableLine,
+  TableBody,
   Thead,
+  TableTd,
 } from './TransactionHistory.styled';
 
-export function TransactionHistory({ transactions }) {
+export function TransactionHistory({ items }) {
   return (
     <Table>
       <Thead>
@@ -16,9 +18,24 @@ export function TransactionHistory({ transactions }) {
           <TableTitles>Currency</TableTitles>
         </tr>
       </Thead>
-      <TableLine>
-        <TransactionData transactions={transactions} />
-      </TableLine>
+      <TableBody>
+        {items.map(item => {
+          return (
+            <tr key={item.id}>
+              <TableTd>{item.type}</TableTd>
+              <TableTd>{item.amount}</TableTd>
+              <TableTd>{item.currency}</TableTd>
+            </tr>
+          );
+        })}
+      </TableBody>
     </Table>
   );
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.array,
+  type: PropTypes.string,
+  amount: PropTypes.number,
+  currency: PropTypes.string,
+};

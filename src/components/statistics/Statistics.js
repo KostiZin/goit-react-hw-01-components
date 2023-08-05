@@ -1,19 +1,26 @@
-import { Section, List, UlFather } from './Statistics.styled';
+import PropTypes from 'prop-types';
+
+import { Section, ListItem, List } from './Statistics.styled';
 
 export function Statistics({ title, stats }) {
-  let statData = stats.map(stat => {
-    return (
-      <List key={stat.id}>
-        <span>{stat.label}</span>
-        <span>{stat.percentage}%</span>
-      </List>
-    );
-  });
-
   return (
     <Section>
-      <h2>{title}</h2>
-      <UlFather>{statData}</UlFather>
+      {title && <h2>{title}</h2>}
+      <List>
+        {stats.map(stat => {
+          return (
+            <ListItem key={stat.id}>
+              <span>{stat.label}</span>
+              <span>{stat.percentage}%</span>
+            </ListItem>
+          );
+        })}
+      </List>
     </Section>
   );
 }
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array,
+};

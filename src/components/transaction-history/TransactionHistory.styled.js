@@ -11,7 +11,7 @@ export const TableTitles = styled.th`
   height: 50px;
 `;
 
-export const TableCell = styled.td`
+export const TableTd = styled.td`
   height: 30px;
   padding-left: 8px;
 `;
@@ -19,7 +19,7 @@ export const Thead = styled.thead`
   background-color: #cbe3f5;
 `;
 
-export const TableLine = styled.tbody`
+export const TableBody = styled.tbody`
   :hover {
     background-color: #73bdf5;
   }

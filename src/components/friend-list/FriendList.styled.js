@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-export const UlFather = styled.ul`
+export const List = styled.ul`
   display: flex;
   gap: 12px;
   margin-top: 60px;
 `;
 
-export const List = styled.li`
+export const ListItem = styled.li`
   background-color: #f2f7f6;
   border: 1px solid #d2d9d4;
   border-radius: 4px;

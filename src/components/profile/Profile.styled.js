@@ -16,7 +16,7 @@ export const DivCard = styled.div`
   align-items: center;
 `;
 
-export const MainImg = styled.img`
+export const Img = styled.img`
   width: 50%;
   margin-top: 40px;
   border-radius: 50%;
@@ -42,14 +42,14 @@ export const PLocation = styled.p`
   padding-bottom: 16px;
 `;
 
-export const UlFatherStats = styled.ul`
+export const List = styled.ul`
   display: flex;
   justify-content: center;
   border: 1px solid #8ac0f2;
   border-style: solid none none;
 `;
 
-export const ListStats = styled.li`
+export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
